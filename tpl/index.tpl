@@ -418,14 +418,14 @@ $("#destroyEx5Slider").click(function() {
 
 // With JQuery
 $("#ex6").slider();
-$("#ex6").on("slide", function(slideEvt) {
-	$("#ex6SliderVal").text(slideEvt.value);
+$("#ex6").on("change", function(slideEvt) {
+	$("#ex6SliderVal").text(slideEvt.value.newValue);
 });
 
 // Without JQuery
 var slider = new Slider("#ex6");
-slider.on("slide", function(slideEvt) {
-	$("#ex6SliderVal").text(slideEvt.value);
+slider.on("change", function(slideEvt) {
+	$("#ex6SliderVal").text(slideEvt.value.newValue);
 });)
 
             </code></pre>
@@ -1060,8 +1060,8 @@ new Slider("#ex16b", { min: 0, max: 10, value: [0, 10], focus: true });
 
 			/* Example 6 */
 			$("#ex6").slider();
-			$("#ex6").on('slide', function(slideEvt) {
-				$("#ex6SliderVal").text(slideEvt.value);
+			$("#ex6").on('change', function(slideEvt) {
+				$("#ex6SliderVal").text(slideEvt.value.newValue);
 			});
 
 			/* Example 7 */
